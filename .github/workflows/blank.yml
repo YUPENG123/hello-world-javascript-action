@@ -28,6 +28,8 @@ jobs:
            token: ${{ secrets.TOKEN }}
 
       - run: |
+          npm install @actions/core
+          npm install @actions/github
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
