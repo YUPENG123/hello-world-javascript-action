@@ -20,9 +20,12 @@ jobs:
          df -h
 #        node global.console
 
-     - name : run1
-       run : |
-           node server.js
+    #  - name : run1
+    #    run : |
+    #        node server.js
+
+     - name: Setup Debug Session
+       uses: csexton/debugger-action@master
 
         
 #    - uses: YUPENG123/hello-world-javascript-action@main
