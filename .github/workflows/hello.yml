@@ -15,8 +15,8 @@ jobs:
      - name: run
        run : |
          node -v
-#        npm -v
-#        node hello.js
+         npm -v
+         node hello.js
 #        node global.console
         
 #    - uses: YUPENG123/hello-world-javascript-action@main
