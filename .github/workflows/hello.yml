@@ -28,10 +28,9 @@ jobs:
 #      uses: csexton/debugger-action@master
 
 
-    - name: Start SSH via tmate
-      uses: P3TERX/ssh2actions@main
+     uses: P3TERX/ssh2actions@main
       # Send connection info to Telegram (optional)
       # You can find related documents here: https://core.telegram.org/bots
-      env:
+        env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
