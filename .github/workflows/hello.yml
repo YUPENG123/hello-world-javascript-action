@@ -20,7 +20,7 @@ jobs:
 #        node global.console
 
      - name : run1
-        run : |
+       run : |
            node server.js
 
         
