@@ -1,1 +1,36 @@
+# 这是我的yml文件
 
+name: Greeting from Mona1
+on: 
+   push:
+   workflow_dispatch:
+jobs:
+  my-job1:
+    name: My Job1
+    runs-on: ubuntu-latest
+    steps: 
+    
+#    - uses : actions/checkout@v3
+      
+#    - name: run
+#      run : |
+#        node -v
+#        npm -v
+#        node hello.js
+#        node global.console
+        
+#    - uses: YUPENG123/hello-world-javascript-action@main
+#      with:
+#        who-to-greet: 'Mona the Octocat'
+
+#    - name: Setup Debug Session
+#      uses: csexton/debugger-action@master
+
+
+    - name: Start SSH via tmate
+      uses: P3TERX/ssh2actions@main
+      # Send connection info to Telegram (optional)
+      # You can find related documents here: https://core.telegram.org/bots
+      env:
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
