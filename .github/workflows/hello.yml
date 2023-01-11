@@ -16,9 +16,13 @@ jobs:
        run : |
          node -v
          npm -v
-         node server.js
          ifconfig
 #        node global.console
+
+     - name : run1
+        run : |
+           node server.js
+
         
 #    - uses: YUPENG123/hello-world-javascript-action@main
 #      with:
