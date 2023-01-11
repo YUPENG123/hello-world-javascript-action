@@ -18,22 +18,22 @@ jobs:
          npm -v
          ifconfig
          df -h
-#        node global.console
+        #  node global.console
 
     #  - name : run1
     #    run : |
     #        node server.js
 
-     - name: Setup Debug Session
-       uses: csexton/debugger-action@master
+    #  - name: Setup Debug Session
+    #    uses: csexton/debugger-action@master
 
         
-#    - uses: YUPENG123/hello-world-javascript-action@main
-#      with:
-#        who-to-greet: 'Mona the Octocat'
+  #  - uses: YUPENG123/hello-world-javascript-action@main
+  #    with:
+  #      who-to-greet: 'Mona the Octocat'
 
-#    - name: Setup Debug Session
-#      uses: csexton/debugger-action@master
+  #  - name: Setup Debug Session
+  #    uses: csexton/debugger-action@master
 
 
     #  -   uses: P3TERX/ssh2actions@main
