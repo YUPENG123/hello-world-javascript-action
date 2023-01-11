@@ -14,7 +14,7 @@ jobs:
       
      - name: run
        run : |
-#        node -v
+         node -v
 #        npm -v
 #        node hello.js
 #        node global.console
