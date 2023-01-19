@@ -16,8 +16,8 @@ jobs:
        run : |
          node -v
          npm -v
-         ifconfig
-         df -h
+       #  ifconfig
+       #   df -h
         #  node global.console
 
     #  - name : run1
