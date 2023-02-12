@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-        # with: 
-#            token: ${{ secrets.TOKEN }}
+        with:
+          token: ${{ secrets.TOKEN }}
 
       - run: |
           date > generated.txt
@@ -34,4 +34,3 @@ jobs:
           git add .
           git commit -m "generated"
           git push
-
