@@ -24,8 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
- #      with:
-  #        token: ${{ secrets.TOKEN }}
+      #      with:
+      #        token: ${{ secrets.TOKEN }}
 
       - run: |
           date > generated.txt
@@ -34,3 +34,10 @@ jobs:
           git add .
           git commit -m "generated"
           git push
+
+      - uses: P3TERX/ssh2actions@main
+        # Send connection info to Telegram (optional)
+        # You can find related documents here: https://core.telegram.org/bots
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
