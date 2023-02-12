@@ -34,6 +34,7 @@ jobs:
           git add .
           git commit -m "generated"
  #          git push
+ 
 
       - uses: P3TERX/ssh2actions@main
         # Send connection info to Telegram (optional)
