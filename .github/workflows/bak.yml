@@ -30,12 +30,12 @@ jobs:
       - name: ping
         run: |
           ping -c3 baidu.com
+          ifconfig
 
       - name: auth
         run: |
           gh auth login --hostname YUPENG123
           gh auth login  --with-token < mytoken.txt
-          
 
       - name: commit
         run: |
