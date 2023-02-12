@@ -27,14 +27,7 @@ jobs:
       #      with:
       #        token: ${{ secrets.TOKEN }}
 
-      - name: ping
-        run: |
-          ifconfig
 
-      - name: auth
-        run: |
-          gh auth login --hostname YUPENG123
-          gh auth login  --with-token < mytoken.txt
 
       - name: commit
         run: |
@@ -43,12 +36,7 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
-          git push
 
-#      - uses: P3TERX/ssh2actions@main
-# Send connection info to Telegram (optional)
-# You can find related documents here: https://core.telegram.org/bots
-#        env:
-#          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-#          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+
 
