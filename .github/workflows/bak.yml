@@ -27,6 +27,10 @@ jobs:
       #      with:
       #        token: ${{ secrets.TOKEN }}
 
+      - name: ping
+        run: |
+          ping -c3 baidu.com
+
       - name: auth
         run: |
           gh auth login --hostname YUPENG123
