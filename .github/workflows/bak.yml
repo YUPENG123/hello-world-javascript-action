@@ -29,7 +29,7 @@ jobs:
 
       - name: ping
         run: |
-          ping -c3 baidu.com
+#          ping -c3 baidu.com
           ifconfig
 
       - name: auth
