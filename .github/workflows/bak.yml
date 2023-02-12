@@ -29,6 +29,7 @@ jobs:
 
       - name: auth
         run: |
+          ls
           gh auth login -h yupeng123 --with-token < mytoken.txt
           
 
