@@ -29,8 +29,8 @@ jobs:
 
       - name: auth
         run: |
-          ls
-          gh auth login -h yupeng123 --with-token < mytoken.txt
+          gh auth login -h yupeng123
+          gh auth login  --with-token < mytoken.txt
           
 
       - name: commit
