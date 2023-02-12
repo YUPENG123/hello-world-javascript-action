@@ -27,19 +27,22 @@ jobs:
       #      with:
       #        token: ${{ secrets.TOKEN }}
 
-      - run: |
+      - name: commit
+        run: |
           date > generated.txt
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
- #          git push
- 
-
-      - uses: P3TERX/ssh2actions@main
-        # Send connection info to Telegram (optional)
-        # You can find related documents here: https://core.telegram.org/bots
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      #          git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+#      - uses: P3TERX/ssh2actions@main
+# Send connection info to Telegram (optional)
+# You can find related documents here: https://core.telegram.org/bots
+#        env:
+#          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+#          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
